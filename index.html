@@ -3,29 +3,92 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Parin Parikh | Software Developer | London, UK</title>
+        <meta name="description" content="I'm a software developer based in London. I love solving problems using programming. I also blog about my thoughts on interesting technologies and life.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <meta property="og:site_name" content="Parin Parikh | Software Developer | London, UK" />
+        <meta property="og:title" content="Parin Parikh | Software Developer | London, UK" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://parin.me/img/screenshot.png" />
+        <meta property="og:description" content="I'm a software developer based in London. I love solving problems using programming. I also blog about my thoughts on interesting technologies and life." />
+        <meta property="og:url" content="https://parin.me" />
+        <meta property="twitter:card" content="summary_large_image" />
+
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/icons.css" />
+        <link href="//fonts.googleapis.com/css?family=Exo:900,100,400" rel="stylesheet" type="text/css" />
+
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <noscript>
+            <style>
+                body {
+                    overflow: auto !important;
+                }
+                body:before {
+                    display: none !important;
+                }
+                #main {
+                    opacity: 1.0 !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    -ms-transform: none !important;
+                    transform: none !important;
+                    -moz-transition: none !important;
+                    -webkit-transition: none !important;
+                    -ms-transition: none !important;
+                    transition: none !important;
+                    -moz-filter: none !important;
+                    -webkit-filter: none !important;
+                    -ms-filter: none !important;
+                    filter: none !important;
+                }
+                #main > .inner > * {
+                    opacity: 1.0 !important;
+                    -moz-transform: none !important;
+                    -webkit-transform: none !important;
+                    -ms-transform: none !important;
+                    transform: none !important;
+                    -moz-transition: none !important;
+                    -webkit-transition: none !important;
+                    -ms-transition: none !important;
+                    transition: none !important;
+                    -moz-filter: none !important;
+                    -webkit-filter: none !important;
+                    -ms-filter: none !important;
+                    filter: none !important;
+                }
+            </style>
+        </noscript>
     </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <body class="is-loading">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+                    <h1 id="text01">Parin Parikh</h1>
+                    <p id="text02"><strong>Software Developer</strong></p>
+                    <hr id="divider01">
+
+                    <ul class="icons" id="icons01">
+
+                        <li><a class="icon-twitter n01" href="https://twitter.com/parin95"><span class="label">twitter</span></a></li>
+                        <li><a class="icon-medium n02" href="https://medium.com/@parin95"><span class="label">medium</span></a></li>
+                        <li><a class="icon-github n03" href="https://github.com/parin95"><span class="label">github</span></a></li>
+                        <li><a class="icon-linkedin n04" href="http://uk.linkedin.com/pub/parin-parikh/95/ba3/942/"><span class="label">linkedin</span></a></li>
+                        <li><a class="icon-envelope n05" href="mailto:contact@parin.me"><span class="label">email</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        var d = document, b = d.body, on = addEventListener, st = setTimeout, ct = clearTimeout;on('load', function() {st(function() {b.className = b.className.replace(/\bis-loading\b/, 'is-playing');st(function() {b.className = b.className.replace(/\bis-playing\b/, 'is-ready')}, 3000);}, 100);});b.tabIndex = -1;var rfk = '-webkit-overflow-scrolling', rf = function() {b.style[rfk] = 'auto';st(function() {b.style[rfk] = 'touch';b.focus();}, 100);};on('load', rf);on('orientationchange', rf);if (navigator.userAgent.match(/(MSIE|rv:11\.0)/)) {(function() {var t, f;f = function() {var x = d.querySelector('#wrapper');if (x.scrollHeight > innerHeight)x.style.height = 'auto'; else x.style.height = '100%';};(f)();on('resize', function() {ct(t);t = st(f, 250);});})();}
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
