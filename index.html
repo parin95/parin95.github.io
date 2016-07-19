@@ -86,15 +86,5 @@
         <script>
         var d = document, b = d.body, on = addEventListener, st = setTimeout, ct = clearTimeout;on('load', function() {st(function() {b.className = b.className.replace(/\bis-loading\b/, 'is-playing');st(function() {b.className = b.className.replace(/\bis-playing\b/, 'is-ready')}, 3000);}, 100);});b.tabIndex = -1;var rfk = '-webkit-overflow-scrolling', rf = function() {b.style[rfk] = 'auto';st(function() {b.style[rfk] = 'touch';b.focus();}, 100);};on('load', rf);on('orientationchange', rf);if (navigator.userAgent.match(/(MSIE|rv:11\.0)/)) {(function() {var t, f;f = function() {var x = d.querySelector('#wrapper');if (x.scrollHeight > innerHeight)x.style.height = 'auto'; else x.style.height = '100%';};(f)();on('resize', function() {ct(t);t = st(f, 250);});})();}
         </script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-48958016-1','auto');ga('send','pageview');
-        </script>
     </body>
 </html>
