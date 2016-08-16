@@ -16,10 +16,7 @@
         <meta property="twitter:card" content="summary_large_image" />
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <noscript id="deferred-styles">
-            <link rel="stylesheet" href="css/main.css">
-        </noscript>
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
 
@@ -68,32 +65,16 @@
         </div>
 
         <script>
-        var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-48958016-1','auto'); ga('send','pageview');
 
-        if (raf) {
-            raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-        }
-        else {
-            window.addEventListener('load', loadDeferredStyles);
-        }
+            var trackOutboundLink = function(url) {
+                ga('send', 'event', 'outbound', 'click', url, {
+                    'transport': 'beacon'
+                });
 
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-48958016-1','auto'); ga('send','pageview');
-
-        var trackOutboundLink = function(url) {
-            ga('send', 'event', 'outbound', 'click', url, {
-                'transport': 'beacon'
-            });
-
-            return true;
-        };
+                return true;
+            };
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
