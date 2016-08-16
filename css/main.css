@@ -384,7 +384,7 @@ body.is-loading #main > .inner > * {
     margin-left: auto !important;
     margin-right: auto !important;
     color: #FFFFFF;
-    font-family: 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif';
     position: relative;
     letter-spacing: 0.05rem;
     left: 0.025rem;
@@ -416,7 +416,7 @@ p br + br {
 }
 #text01 {
     color: #FFFFFF;
-    font-family: 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif';
     position: relative;
     letter-spacing: 0.35rem;
     left: 0.175rem;
@@ -429,7 +429,7 @@ p br + br {
 }
 #text02 {
     color: #FFFFFF;
-    font-family: 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif';
     position: relative;
     letter-spacing: 0.05rem;
     left: 0.025rem;
