@@ -16,50 +16,12 @@
         <meta property="twitter:card" content="summary_large_image" />
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="css/main.css">
 
-        <noscript>
-            <style>
-                body {
-                    overflow: auto !important;
-                }
-                body:before {
-                    display: none !important;
-                }
-                #main {
-                    opacity: 1.0 !important;
-                    -moz-transform: none !important;
-                    -webkit-transform: none !important;
-                    -ms-transform: none !important;
-                    transform: none !important;
-                    -moz-transition: none !important;
-                    -webkit-transition: none !important;
-                    -ms-transition: none !important;
-                    transition: none !important;
-                    -moz-filter: none !important;
-                    -webkit-filter: none !important;
-                    -ms-filter: none !important;
-                    filter: none !important;
-                }
-                #main > .inner > * {
-                    opacity: 1.0 !important;
-                    -moz-transform: none !important;
-                    -webkit-transform: none !important;
-                    -ms-transform: none !important;
-                    transform: none !important;
-                    -moz-transition: none !important;
-                    -webkit-transition: none !important;
-                    -ms-transition: none !important;
-                    transition: none !important;
-                    -moz-filter: none !important;
-                    -webkit-filter: none !important;
-                    -ms-filter: none !important;
-                    filter: none !important;
-                }
-            </style>
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" href="css/main.css">
         </noscript>
     </head>
-    <body class="is-loading">
+    <body>
 
         <div id="wrapper">
             <div id="main">
@@ -67,15 +29,38 @@
 
                     <h1 id="text01">Parin Parikh</h1>
                     <p id="text02"><strong>Software Developer</strong></p>
-                    <hr id="divider01">
+                    <hr id="divider">
 
-                    <ul class="icons" id="icons01">
+                    <ul class="icons">
+                        <li>
+                            <a class="icon-github" href="https://github.com/parin95" onclick="return trackOutboundLink(this.href)">
+                                <span class="label">github</span>
+                            </a>
+                        </li>
 
-                        <li><a class="icon-twitter n01" href="https://twitter.com/parin95" onclick="return trackOutboundLink(this.href)"><span class="label">twitter</span></a></li>
-                        <li><a class="icon-medium n02" href="https://medium.com/@parin95" onclick="return trackOutboundLink(this.href)"><span class="label">medium</span></a></li>
-                        <li><a class="icon-github n03" href="https://github.com/parin95" onclick="return trackOutboundLink(this.href)"><span class="label">github</span></a></li>
-                        <li><a class="icon-linkedin n04" href="https://www.linkedin.com/in/parin-parikh-942ba395" onclick="return trackOutboundLink(this.href)"><span class="label">linkedin</span></a></li>
-                        <li><a class="icon-envelope n05" href="mailto:contact@parin.me"><span class="label">email</span></a></li>
+                        <li>
+                            <a class="icon-medium" href="https://medium.com/@parin95" onclick="return trackOutboundLink(this.href)">
+                                <span class="label">medium</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="icon-linkedin" href="https://www.linkedin.com/in/parin-parikh-942ba395" onclick="return trackOutboundLink(this.href)">
+                                <span class="label">linkedin</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="icon-twitter" href="https://twitter.com/parin95" onclick="return trackOutboundLink(this.href)">
+                                <span class="label">twitter</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="icon-envelope" href="mailto:contact@parin.me">
+                                <span class="label">email</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>
@@ -83,16 +68,30 @@
         </div>
 
         <script>
-        var d = document, b = d.body, on = addEventListener, st = setTimeout, ct = clearTimeout;on('load', function() {st(function() {b.className = b.className.replace(/\bis-loading\b/, 'is-playing');st(function() {b.className = b.className.replace(/\bis-playing\b/, 'is-ready')}, 3000);}, 100);});b.tabIndex = -1;var rfk = '-webkit-overflow-scrolling', rf = function() {b.style[rfk] = 'auto';st(function() {b.style[rfk] = 'touch';b.focus();}, 100);};on('load', rf);on('orientationchange', rf);if (navigator.userAgent.match(/(MSIE|rv:11\.0)/)) {(function() {var t, f;f = function() {var x = d.querySelector('#wrapper');if (x.scrollHeight > innerHeight)x.style.height = 'auto'; else x.style.height = '100%';};(f)();on('resize', function() {ct(t);t = st(f, 250);});})();}
-        
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+
+        if (raf) {
+            raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        }
+        else {
+            window.addEventListener('load', loadDeferredStyles);
+        }
+
         window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
         ga('create','UA-48958016-1','auto'); ga('send','pageview');
-        
+
         var trackOutboundLink = function(url) {
             ga('send', 'event', 'outbound', 'click', url, {
                 'transport': 'beacon'
             });
-            
+
             return true;
         };
         </script>
